@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo e Qualidade do Ar</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Previsão do Tempo e Qualidade do Ar</h1>
+        <div class="select-container">
+            <label for="estado">Estado:</label>
+            <select id="estado"></select>
+        </div>
+        
+        <div class="select-container">
+            <label for="cidade">Cidade:</label>
+            <select id="cidade"></select>
+        </div>
+        
+        <div id="relatorio" class="relatorio">
+            <div id="info" class="info"></div>
+            <h2>Relatório</h2>
+
+            <div id="dataAtual" class="data-atual"></div>
+            <div id="qualidadeAr" class="qualidade-ar"></div>
+            <div id="mensagemQualidade" class="mensagem-qualidade"></div>
+            
+            <table id="previsao">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Condição</th>
+                        <th>Chuva (%)</th>
+                        <th>Temperatura (°C)</th>
+                        <th>Sensação (°C)</th>
+                        <th>Umidade (%)</th>
+                        <th>Vento (Kph)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <button id="salvar" onclick="salvarPDF()" class="btn">Salvar PDF</button>
+    </div>
+
+    <script src="./src/scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
